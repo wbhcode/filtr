@@ -7,7 +7,7 @@ module Filtr
 
     def initialize(file_path)
       @file_path = File.expand_path(file_path)
-      @path = @file_path.chomp(File.extname(@file_path))+"-lomo.png"
+      @path = @file_path.chomp(File.extname(@file_path))
       @mask = @file_path.chomp(File.extname(@file_path))+"-mask.png"
       @vignette_mask = File.join(File.dirname(__FILE__), "assets", "vignette.png")
     end
